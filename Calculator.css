@@ -1,0 +1,37 @@
+body {
+	text-align: center;
+}
+
+.calcMain {
+	text-align: center;
+	height: 540px;
+	width: 450px;
+	background-color: #D6D6D6;
+	border: solid 2px #A1A1A1;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px 0 #c4c4c4;
+	position: relative;
+	margin: 0 auto;
+}
+
+.displayWindow {
+	height: 100px;
+	width: 400px;
+	background-color: #DEF7FF;
+	border: solid 2px #5AD2FA;
+	border-radius: 10px;
+	position: relative;
+	margin: 20px auto;
+}
+
+.button {
+	text-align: center;
+	height: 55px;
+	width: 55px;
+	background-color: #DEF7FF;
+	border: solid 2px #5AD2FA;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 0 10px 10px 10px;
+	line-height: 55px;
+}

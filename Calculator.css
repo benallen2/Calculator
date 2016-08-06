@@ -4,34 +4,113 @@ body {
 
 .calcMain {
 	text-align: center;
-	height: 540px;
-	width: 450px;
-	background-color: #D6D6D6;
-	border: solid 2px #A1A1A1;
+	height: 560px;
+	width: 400px;
+	background-color: #0f5a9d;
+	border: solid 2px #0059A8;
 	border-radius: 10px;
-	box-shadow: 0 2px 2px 0 #c4c4c4;
+	box-shadow: 0 5px 5px 0 #136BBA;
 	position: relative;
 	margin: 0 auto;
 }
 
 .displayWindow {
 	height: 100px;
-	width: 400px;
-	background-color: #DEF7FF;
-	border: solid 2px #5AD2FA;
-	border-radius: 10px;
+	width: 350px;
+	background-color: #A2A2A2;
+	border: solid 2px #7D7D7D;
+	border-radius: 5px;
 	position: relative;
 	margin: 20px auto;
 }
+.solarBlock{
+	height: 40px;
+	width: 50px;
+	background-color: #696969;
+	border-right: solid 3px black;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	box-shadow: 2px -2px 0px 2px rgba(66,66,66,1);
+}
+.solar{
+	margin-left: 20px;
+}
+.solarBlockEnd{
+	height: 40px;
+	width: 50px;
+	background-color: #696969;
+	box-shadow: 5px 5px 0px 0px;
+	float: left;
+	margin-bottom: 10px;
+	box-shadow: 2px -2px 0px 2px rgba(66,66,66,1);
+}
 
 .button {
-	text-align: center;
-	height: 55px;
-	width: 55px;
-	background-color: #DEF7FF;
-	border: solid 2px #5AD2FA;
-	border-radius: 10px;
-	display: inline-block;
-	margin: 0 10px 10px 10px;
-	line-height: 55px;
+	text-align: left;
+	height: 50px;
+	width: 65px;
+	background-color: white;
+	border: solid 2px #0059A8;
+	border-radius: 5px;
+	margin: 0 10px 10px 20px;
+	float: left;
+	font-family: 'Catamaran', sans-serif;
+	color: #0f5a9d;
+	font-weight: bolder;
+	font-size: 16px;
+
+}
+.buttonRow{
+	clear: both;
+	margin-top: 10px;
+}
+
+p{
+	padding-left: 5px;
+	margin-top: 2px;
+}
+
+#equals {
+	height: 80px;
+	position: relative;
+}
+
+
+.endRow{
+	clear: left;
+}
+
+.funcButton {
+	height: 50px;
+	width: 65px;
+	background-color: #c22b30;
+	border: solid 2px #B30006;
+	border-radius: 5px;
+	margin: 0 10px 10px 20px;
+	float: right;
+	font-family: 'Catamaran', sans-serif;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.onbtn{
+	text-align: left;
+	height: 50px;
+	width: 65px;
+	background-color: #c22b30;
+	border: solid 2px #B30006;
+	border-radius: 5px;
+	margin: 0 10px 10px 20px;
+	float: left;
+	font-family: 'Catamaran', sans-serif;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.top{
+	float: left;
+}
+.numButtons {
+	padding-top: 80px;
 }

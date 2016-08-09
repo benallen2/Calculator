@@ -1,5 +1,10 @@
 body {
 	text-align: center;
+  background: url(http://www.clker.com/cliparts/b/3/7/7/127573885139210730desk_texture.png);
+}
+
+h1 {
+  color: white;
 }
 
 .calcMain {

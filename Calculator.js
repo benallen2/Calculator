@@ -1,10 +1,8 @@
-
-var inputArr = [];
-var clickArr = [];// array of buttons being clicked initially
-var funcArr = [];// array joining button clicks
-var numArr = [];
-var inputHtml = 0;
-var sum = 0;
+var calcStr = "";
+var clickArr = []; //collects the clicks
+var clickStr; //combines the clicks on math funciton click
+var calcArr = []; // pushes combined clicks and functions
+var sum;
 
 
 function inputDisplay(){
@@ -12,30 +10,56 @@ function inputDisplay(){
 		inputHtml = parseInt(($(this).children("p").html()));
 		$(".input").append(inputHtml);//push click value into input field.
 		clickArr.push(inputHtml);//push click value into clickArr.
-		
+		clickStr = clickArr.join("");
+		console.log(clickStr);
 	});
 }
 
+function funcClick(){
+	$(".maths").click(function(){
+		switch ($(this).attr("id")){
+			case "plus":
+			$(".input").append(" + ");
+			clickArr.push("+");
+			break;
+			case "minus": 
+			$(".input").append(" - ");
+			clickArr.push("-");
+			break;
+			case "multiply":
+			$(".input").append(" * ");
+			clickArr.push("*");
+			break;
+			case "divide":
+			$(".input").append(" &divide; ");
+			clickArr.push("/");
+			break;
+			case "posNeg":
+			sum *= -1;
+			$(".output").empty();
+			$(".output").html(sum);
+			break;
+			case "squareRoot":
+			sum = Math.sqrt(sum);
+			sum = +sum.toFixed(4);
+			$(".output").empty();
+			$(".output").html(sum);
+			break;
+		}
 
- //each click needs to be pushed into an array, then joined into a number when function button is clicked.
-function plusClick(){
-	$("#plus").click(function(){
-			funcArr.push(Number(clickArr.join(""))); // on plus click push whole clickArr into funcArr
-			clickArr = [];//reset the click array
+		clickStr = clickArr.join("");
+				
+	});
+}
 
-		$(".input").append(" + ");//show plus symbol on input field
+function equalsClick(){
+	$("#equals").click(function(){
+		sum = eval(clickStr);
+		sum = +sum.toFixed(4);
+		$(".output").html(sum);
 	})
 }
 
-function equalClick(){
-	$("#equals").click(function(){
-		funcArr.push(Number(clickArr.join("")));//pushes new clicks into final ready to compute funcArr
-		for (var i = 0; i < funcArr.length; i++){
-				sum += funcArr[i];
-				$(".output").html(sum);//make the output the added values.
-			}
-		}
-	)}
 
 
 function clearClick(){
@@ -68,6 +92,6 @@ $(document).ready(function(){
 	inputDisplay();
 	clearClick();
 	turnOn();
-	plusClick();
-	equalClick();
+	funcClick();
+	equalsClick();
 });

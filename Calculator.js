@@ -11,7 +11,7 @@ function inputDisplay(){
 		$(".input").append(inputHtml);//push click value into input field.
 		clickArr.push(inputHtml);//push click value into clickArr.
 		clickStr = clickArr.join("");
-		console.log(clickStr);
+		
 	});
 }
 
@@ -35,15 +35,29 @@ function funcClick(){
 			clickArr.push("/");
 			break;
 			case "posNeg":
-			sum *= -1;
-			$(".output").empty();
-			$(".output").html(sum);
+			if (clickArr.indexOf("-") < 0){
+				clickArr.unshift("-");
+				$(".input").empty();
+				$(".input").html("-" + clickStr);
+				console.log(clickArr);
+			}
+			else if (clickArr.indexOf("-") == 0){
+				clickArr.shift("-");;
+				$(".input").empty();
+				$(".input").html(clickArr.join(""));
+			}			
 			break;
 			case "squareRoot":
+			
+			$(".input").html("&radic;" + sum);
 			sum = Math.sqrt(sum);
 			sum = +sum.toFixed(4);
 			$(".output").empty();
 			$(".output").html(sum);
+			break;
+			case "decimal":
+			$(".input").append(".");
+			clickArr.push(".");
 			break;
 		}
 
@@ -54,6 +68,7 @@ function funcClick(){
 
 function equalsClick(){
 	$("#equals").click(function(){
+		console.log(clickStr);
 		sum = eval(clickStr);
 		sum = +sum.toFixed(4);
 		$(".output").html(sum);

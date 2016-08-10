@@ -1,4 +1,4 @@
-var calcStr = "";
+var calcStr; //placeholder for sqrt
 var clickArr = []; //collects the clicks
 var clickStr; //combines the clicks on math funciton click
 var calcArr = []; // pushes combined clicks and functions
@@ -48,9 +48,9 @@ function funcClick(){
 			}			
 			break;
 			case "squareRoot":
-			
-			$(".input").html("&radic;" + sum);
-			sum = Math.sqrt(sum);
+			calcStr = clickStr
+			$(".input").html("&radic;" + calcStr);
+			sum = Math.sqrt(calcStr);
 			sum = +sum.toFixed(4);
 			$(".output").empty();
 			$(".output").html(sum);
